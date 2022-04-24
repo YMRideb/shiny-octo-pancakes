@@ -1,12 +1,11 @@
 /* Overall container */
-/*
 .nav {
   background-color: #333;
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: space-between;
   
-  /* Separate left from right     
+  /* Separate left from right */     
   }
 .nav-title {
   color: #fff;
@@ -19,13 +18,13 @@
 
 .nav-links {
   /* color: #fff; */
-  /* background-color: aliceblue; 
+  /* background-color: aliceblue; */ 
   display: flex;
   padding-top: 15px;
   justify-content: center;
   
 }
-  /* Formatting the li 
+  /* Formatting the li */
 .active {
   
   font-weight: bold;
@@ -35,10 +34,10 @@
   color: #fff;
 }
 .deco {
-  /* padding: 10px;
+  /* padding: 10px; */
   list-style-type: none; 
   color: #fff;
-  /* font-family: Arial, Helvetica, sans-serif; 
+  /* font-family: Arial, Helvetica, sans-serif; */ 
   text-decoration: none;
 }
 li {
@@ -57,9 +56,9 @@ li {
   width: 600px;
   justify-content: flex-start;
 }
-.user-card {
+.user-card, .education {
 width: 980px;
-height: 600px;
+height: 400px;
 }
 .banner {
   background-color: blue;
