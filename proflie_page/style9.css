@@ -1,19 +1,67 @@
+/* Overall container */
+/*
+.nav {
+  background-color: #333;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  
+  /* Separate left from right     
+  }
+.nav-title {
+  color: #fff;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: flex-start;
+  padding-left: 10px;
+  
+}
+
+.nav-links {
+  /* color: #fff; */
+  /* background-color: aliceblue; 
+  display: flex;
+  padding-top: 15px;
+  justify-content: center;
+  
+}
+  /* Formatting the li 
+.active {
+  
+  font-weight: bold;
+}
+.btn {
+  background-color: cadetblue;
+  color: #fff;
+}
+.deco {
+  /* padding: 10px;
+  list-style-type: none; 
+  color: #fff;
+  /* font-family: Arial, Helvetica, sans-serif; 
+  text-decoration: none;
+}
+li {
+  padding: 0px 10px;
+  list-style-type: none;    
+} */
+/* BREAK FOR PROFILE STYLES */
 * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-body {
+.col-left {
   border: 5px solid grey;
   font-family: Arial, Helvetica, sans-serif;
   width: 600px;
   justify-content: flex-start;
 }
-.container {
+.user-card {
 width: 980px;
-height: 400px;
+height: 600px;
 }
-.nav {
+.banner {
   background-color: blue;
   height: 100px;
   width: 600px;
@@ -31,8 +79,6 @@ height: 400px;
   bottom: 50px;
   left: 10px;
 }
-.pic {
-}
 .userName {
   width: 200px;
   position: relative;
@@ -45,5 +91,7 @@ height: 400px;
   left: 10px;
 }
 p {
-  margin: 2px;
+  padding: 2px;
+
 }
+/* BREAK FOR OTHER STYLES */
