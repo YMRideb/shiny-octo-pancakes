@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  body {
+    border: 5px solid grey;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+    justify-content: flex-start;
+  }
+  .container {
+  width: 980px;
+  height: 400px;
+  }
+  .nav {
+    background-color: blue;
+    height: 100px;
+    width: 600px;
+  }
+  
+  .img {
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 7px;
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+  }
+  .pic {
+  }
+  .userName {
+    width: 200px;
+    position: relative;
+    top: 120px;
+    right: 100px;
+  }
+  .info {
+    position: relative;
+    top: 30px;
+    left: 10px;
+  }
+  p {
+    margin: 2px;
+  }
