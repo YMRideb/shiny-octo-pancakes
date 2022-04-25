@@ -4,68 +4,83 @@
   padding: 0;
   font-family: sans-serif;
 }
+
 .container {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
+
+/* Navigation  */
 .nav {
   background-color: #333;
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: space-between;
 }
+
 .nav-title {
   color: #fff;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   justify-content: flex-start;
   padding-left: 10px;
-  
+
 }
+
 .nav-links {
-  /* color: #fff; */
-  /* background-color: aliceblue; */ 
   display: flex;
   padding-top: 15px;
   justify-content: center;
-  
+
 }
-  /* Formatting the li */
+
 .active {
-  
+
   font-weight: bold;
 }
+
 .btn {
   background-color: cadetblue;
   color: #fff;
 }
+
 .deco {
-  list-style-type: none; 
+  list-style-type: none;
   color: #fff;
   text-decoration: none;
 }
+
 li {
   padding: 0px 10px;
-  list-style-type: none;    
-} */
-/* BREAK FOR PROFILE STYLES */
-  /* Separate left from right */
-.col-left {
-  /* border: 5px solid grey; */
+  list-style-type: none;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Separate left from right */
+.col-left {
   width: 600px;
   display: flex;
   flex-direction: column;
   padding: 50px;
 }
+
 .user-card {
-border: 10px solid gray;
-width: 600px;
-height: 400px;
-padding-bottom: 30px;
-/* display: flex; */
-/* flex-direction: column; */
+  border: 10px solid gray;
+  width: 600px;
+  height: 400px;
+  padding-bottom: 30px;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
+
 .banner {
   background-color: blue;
   height: 100px;
@@ -84,31 +99,144 @@ padding-bottom: 30px;
   bottom: 50px;
   left: 10px;
 }
-.userName {
+
+.user-name {
   width: 200px;
   position: relative;
   top: 120px;
   right: 100px;
 }
+
 .info {
   position: relative;
   top: 30px;
   left: 10px;
 }
+
 p {
   padding: 2px;
-
 }
-.banner2 {
-  background-color: #222;
+
+/* Start dojo Card */
+
+.dojo {
+  border: 10px solid gray;
+  width: 600px;
+  height: 275px;
+  margin-top: 50px;
+  background-color: white;
+}
+
+.dojo-banner {
+  width: auto;
+  height: 75px;
+  background-color: slategray;
+}
+
+.dojo-cont {
+  margin-left: 50px;
+}
+
+.dojo-title {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.dojo-dates {
+  font-weight: bold;
+  color: slategray;
+  margin-top: 5px;
+}
+
+/* BREAK FOR CONNECTION STYLES */
+.col-right {
+  width: 300px;
+  padding: 50px;
+}
+
+.req {
   color: #fff;
-  height: 50px;
-  width: 600px;
+  width: 280px;
+  display: flex;
+  background-color: #222;
+  padding: 10px;
 }
-.courses {
-  width: 600px;
-height: 400px;
-padding-bottom: 30px;
 
+.reqs {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* BREAK FOR OTHER STYLES */
+
+.reqTitle {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.yesNo {
+  width: 300px;
+  border: 10px solid gray;
+}
+
+.reqImg {
+  display: flex;
+  align-items: center;
+}
+
+.profiles {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.respond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect {
+  width: 300px;
+  border: 10px solid gray;
+  margin-top: 50px;
+  background-color: white;
+}
+
+.connectBanner {
+  background-color: #222;
+  padding: 10px 5px;
+  color: aliceblue;
+  width: 300px;
+}
+
+.connectNum {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  color: blue;
+  padding: 5px;
+}
+
+.connections {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.more {
+  padding: 10px;
+  margin-top: 5px;
+  border-top: slategrey solid 2px;
+}
+
+.respond>img {
+  width: 33%;
+  padding: 10px;
+}
