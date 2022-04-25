@@ -1,4 +1,8 @@
 /* Overall container */
+.container {
+  display: flex;
+  align-items: center;
+}
 .nav {
   background-color: #333;
   font-family: 'Roboto', sans-serif;
@@ -56,12 +60,15 @@ li {
   width: 600px;
   display: flex;
   flex-direction: column;
+  padding: 50px;
 }
 .user-card, .education {
 border: 10px solid gray;
-width: 980px;
+width: 600px;
 height: 400px;
 padding-bottom: 30px;
+/* display: flex; */
+/* flex-direction: column; */
 }
 .banner {
   background-color: blue;
@@ -101,5 +108,11 @@ p {
   color: #fff;
   height: 50px;
   width: 600px;
+}
+.courses {
+  width: 600px;
+height: 400px;
+padding-bottom: 30px;
+
 }
 /* BREAK FOR OTHER STYLES */
