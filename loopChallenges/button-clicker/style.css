@@ -33,4 +33,32 @@ padding: 10px;
 }
 
   /* Start Columns and Content Styles */
-  
+  .left-col {
+    border: 3px solid red;;
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .left-main {
+    border: 3px dotted cyan;
+    width: 33%;
+  }
+  .left-main>h1, p, .btn2 {
+    padding: 10px;
+  }
+
+  /* Start Right columns */
+  .right-col {
+    border: 3px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+  .right-main {
+    border: 3px dashed red;
+  }
+  .btn3 {
+    
+  }
