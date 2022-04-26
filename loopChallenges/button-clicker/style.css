@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+    display: flex;
+}
+
+.nav {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 20px;
+}
+
