@@ -3,96 +3,34 @@
     padding: 0;
     font-family: sans-serif;
 }
-
-body {
-    background-color: blanchedalmond;
-    display: flex;
-}
-
-/* Navigation  */
+    /* styles for navigation */
 .nav {
-    background-color: #333;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .navcontent {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .nav-title {
-    color: #fff;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: flex-end;
-    padding-left: 10px;
-  
-  }
-  #searchbar {
-      width: 200px;
-      height: 20px;
-      display: flex;
-      justify-content: center;
-      padding: 5px;
-  }
-  
-  .nav-links {
-    display: flex;
-    padding-top: 15px;
-    justify-content: center;
-  
-  }
-  
-  .active {
-    font-weight: bold;
-  }
-  
-  .btn {
-    background-color: cadetblue;
-    color: #fff;
-  }
-  
-  .deco {
-    list-style-type: none;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  li {
-    padding: 0px 10px;
-    list-style-type: none;
-  }
-
-/* .nav {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.nav-content {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  background-color: #333;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  /* width: 75%; */
+  height: 100px;
 }
 
 .nav-title {
-    text-align: center;
-    font-size: 49px;
-    color: white;
+  color: #fff;
+padding: 10px;
 }
-
-.nav-search {
-    width: 200px;
-    height: 20px;
+#search {
+  width: 75%;
+  height: 32px;
+  
 }
 
 .btn {
-    display: flex;
-    justify-content: space-between;
-    /* margin-inline: 10px; */
-    text-align: center;
-} */
+  background-color: cadetblue;
+  color: #fff;
+  height: 32px;
+  width: 64px;
+}
+
+  /* Start Columns and Content Styles */
+  
