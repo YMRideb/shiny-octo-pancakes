@@ -24,6 +24,11 @@ padding: 10px;
   height: 32px;
   
 }
+main {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
 
 .btn {
   background-color: cadetblue;
