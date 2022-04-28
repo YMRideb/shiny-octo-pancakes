@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+/* Navigation  */
+.nav {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-title {
+    color: #fff;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+/* Generic CSS */
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right {
+    background-color: burlywood;
+    border: 2px solid #333;
+    box-shadow: 3px 3px 3px 3px #555;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.left {
+    background-color: #777;
+    border: 3px solid #111;
+    color: #000;
+    box-shadow: 3px 3px 3px 3px #555;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex2 {
+    width: 500px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.d-flex1 {
+    width: 100px;
+    height: 150px;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.gap-small {
+    gap: 10px;
+}
+
+.gap-med {
+    gap: 20px;
+}
+
+.gap-lrg {
+    gap: 40px;
+}
+
+.btn {
+    border: 1px solid #333;
+    box-shadow: 4px 4px 4px 4px #999;
+    width: 64px;
+    height: 32px;
+    margin: 10px;
+    padding: 10px;
+}
+
+h1,
+p,
+button {
+    padding: 10px 50px;
+}
+
+h2 {
+    padding: 10px;
+}
+
+img {
+    width: 50%;
+}
