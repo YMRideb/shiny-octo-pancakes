@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dojo-sports</title>
     <link rel="stylesheet" href="dojo-sports-styles.css">
+    <link rel="stylesheet" href="../../../Yukio_Rideb_WebFund_BeltExam/nav-styles.css">
 </head>
 
-<body>
+<body onload="endGame()">
     <!-- Start the first header bar at the top -->
     <div class="live-scores">
         <p class="nav-head">Live Scores</p>
@@ -64,9 +65,9 @@
                 <button class="sign-in">Sign In</button>
                 <button class="sign-up">New to DSNN?</button>
             </div>
-            <div class="never-miss">
+            <div class="never-miss" id="boom">
                 <h3>Never miss a play . . .</h3>
-                <button class="remove">Subscribe</button>
+                <button class="remove" onclick="subscribe()">Subscribe</button>
             </div>
         </div>
         <div class="right-main">
@@ -84,7 +85,7 @@
                     <p>San Jose</p>
                     <h2 class="home">Ninjas</h2>
                     <p class="record">(10 / 3)</p>
-                    <h1 class="now">314</h1>
+                    <h1 class="now" id="ninja-now" onclick="add1()">314</h1>
                 </div>
                 <div class="mid">
                     <h2>vs</h2>
@@ -96,7 +97,7 @@
                     <p>Nova Scotia</p>
                     <h2 class="home">Pirates</h2>
                     <p class="record">(12 / 2)</p>
-                    <h1 class="now">159</h1>
+                    <h1 class="now" id="pirate-now" onclick="addOne(this)">159</h1>
                 </div>
             </div>
             <div class="main-bot">
