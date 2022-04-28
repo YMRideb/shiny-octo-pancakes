@@ -10,16 +10,49 @@
 </head>
 
 <body>
-    <nav>
-        
+    <!-- Profile Bar At Top -->
+    <nav class="nav">
+        <h1 class="nav-title">Profile</h1>
     </nav>
-    <div class="center d-flex2">
-        <div class="top">
-            <h1 class="user">James Holden</h1>
-            <p id="counter">0 Likes</p>
-            <button class="btn" onclick="add1()">Like</button>
+
+    <!-- Start container for the entire page -->
+    <div class="container">
+        <!-- Start left side of the page -->
+        <div class="left col-1">
+            <div class="top">
+                <img src="../proflie_page/icons/user-circle.png" alt="user img">
+                <a href="#">Add an Avatar</a>
+                <h2>User Image</h2>
+            </div>
         </div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita!</p>
+        <!-- Start right side of the page -->
+        <div class="d-flex col-1">
+            <div class="right">
+                <div class="top">
+                    <h1 class="user">James Holden</h1>
+                    <p id="counter">0 Likes</p>
+                    <button class="btn" onclick="add1()">Like</button>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita!</p>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <h1 class="user">James Holden</h1>
+                    <p id="counter2">0 Likes</p>
+                    <button class="btn" onclick="add1()">Like</button>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita!</p>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <h1 class="user">James Holden</h1>
+                    <p id="counter3">0 Likes</p>
+                    <button class="btn" onclick="add1()">Like</button>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita!</p>
+            </div>
+        </div>
+
     </div>
     <button class="btn" onclick="sub1()">clear.</button>
     <script src="main.js"></script>
