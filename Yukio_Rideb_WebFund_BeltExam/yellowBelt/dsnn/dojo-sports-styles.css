@@ -6,7 +6,7 @@
 }
 
 .container {
-    background-color: aqua;
+    background-color: #ddd;
     /* border: 2px dotted chartreuse; */
     display: flex;
     flex-direction: row;
@@ -78,7 +78,7 @@
 }
 
 .sign-in {
-    background-color: blue;
+    background-color: #2277ea;
     color: #fff;
     padding: 10px
 }
