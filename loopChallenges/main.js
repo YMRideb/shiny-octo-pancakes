@@ -21,8 +21,8 @@ for (i=0; i<=100;i++) {
 }
 
 console.log("Next: Factorial");
-var product = undefined;
-for(i=0;i<=12;i++) {
-    product = i*i;
+var product = 1;
+for(i=1;i<13;i++) {
+    product *= i;
     console.log(product);
 }
