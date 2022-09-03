@@ -50,59 +50,8 @@ const nums4 = [2, 1];
  *    being processed.
  * @returns {Array<number>} The idx where left section of smaller items ends.
  */
-
-    function partition(nums = [], left = 0, right = nums.length - 1) {
-      rand = Math.floor(Math.random() * nums.length);
-      pivot = nums[rand];
-      temp = 0;
-      temp2 = 0;
-
-      while(true){
-        while(nums[left] < pivot){
-          left++
-        } 
-        while (nums[right] > pivot) {
-          right--;
-        }
-
-      }
-
-
-
-
-
-      for (left; left < nums.length; left++) {
-        if (nums[left] < nums[pivot]) {
-          temp = nums[left];
-          temp2 = nums[pivot - 1];
-          nums[left] = temp2;
-          nums[pivot - 1] = temp;
-        } else if (nums[left] > nums[pivot]) {
-          temp = nums[left];
-          temp2 = nums[pivot + 1];
-          nums[left] = temp2;
-          nums[pivot + 1] = temp;
-        }
-
-        for (right; right >= left; right--) {
-          if (nums[right] < nums[pivot]) {
-            temp = nums[right];
-            Temp2 = nums[pivot - 1];
-            nums[right] = Temp2;
-            nums[pivot - 1] = temp;
-          } else if (nums[right] > nums[pivot]) {
-            temp = nums[right];
-            Temp2 = nums[pivot + 1];
-            nums[right] = Temp2;
-            nums[pivot + 1] = temp;
-          }
-        }
-      }
-      console.log(pivot);
-      return nums;
-    }
-
-    console.log(partition(nums1));
-
+function partition(nums = [], left = 0, right = nums.length - 1) {
+    
+}
 
 module.exports = { partition };
