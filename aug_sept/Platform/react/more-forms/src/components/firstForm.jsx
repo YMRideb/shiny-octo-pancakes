@@ -10,7 +10,7 @@ const Form = () => {
 
     
     return(
-        <div>
+        <div> 
             <div className="container">
                 <h3 className="btn btn-outline-secondary">Fill this form out!</h3>
                 <form action="">
