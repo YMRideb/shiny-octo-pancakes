@@ -8,6 +8,7 @@ const Form = () => {
     let [password, setPassword] = useState("");
     let [pwd, setPWD] = useState("");
 
+
     
     return(
         <div> 
@@ -16,30 +17,32 @@ const Form = () => {
                 <form action="">
                     <div className="form-group">
                         <label htmlFor="userName">Username:</label>
-                        <input onChange = {(e)=>setName(e.target.value)} type="text" className="form-control"/>
+                        <input onChange = {(e)=>setName(e.target.value)} type="text" className="form-control" value={name}/>
                         {
                             name.length<3 ? <p className="text-danger">Username must be at least 3 characters long </p> : ""
                         }
 
                         <label htmlFor="emailAddress">Email Address:</label>
-                        <input onChange = {(e)=>setEmail(e.target.value)} type="email" className="form-control"/>
+                        <input onChange = {(e)=>setEmail(e.target.value)} type="email" className="form-control" value={email}/>
                         {
                             email.length<5 ? <p className="text-danger">Email address must be at least 5 characters long </p> : ""
                         }
 
                         <label htmlFor="password">Password:</label>
-                        <input onChange = {(e)=>setPassword(e.target.value)} type="password" className="form-control"/>
+                        <input onChange = {(e)=>setPassword(e.target.value)} type="password" className="form-control" value={password}/>
                         {
                             password.length<8 ? <p className="text-danger">Password must be at least 8 characters long </p> : ""
                         }
 
                         <label htmlFor="confirmPassword">Re-type your password:</label>
-                        <input onChange = {(e)=>setPWD(e.target.value)} type="password" className="form-control"/>
+                        <input onChange = {(e)=>setPWD(e.target.value)} type="password" className="form-control" value={pwd}/>
                         {
                             pwd.length !== password.length ? <p className="text-danger">One of these is not like the other... </p> : ""
                         }
 
                         {/* <input onClick={(e)=>whatgoeshere(e.target.form)} type="submit" value="Click me Thank You" className="btn btn-outline-success" /> */}
+                        {/* <input onClick={handleSubmit} type="submit" value="Click me Thank You" className="btn btn-outline-success" /> */}
+                        
                     </div>
                 </form>
                 <hr />

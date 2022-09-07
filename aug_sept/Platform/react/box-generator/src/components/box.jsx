@@ -1,28 +1,46 @@
 import React, {useState} from "react";
 
 const BoxGenerator = () => {
-    // creates the state variable to bind submission info ?two-way binding?
+    
     let [boxColor, setBoxColor] = useState("");
-    let [boxList, setBoxList] = useState("");
 
-    const renderColor = (e, boxColor)=>{
-        console.log("You generated a new box!", boxColor);
-        // let boxListNew = boxList.map ??
+    //array to hold the list of boxes displayed
+    let [boxList, setBoxList] = useState([]);
+
+    //function that runs when you click the button to submit the form
+    const submitForm = (e)=>{
+
+        e.preventDefault(); //this will prevent the form submission from reloading the page
+        
+        //put the boxcolor into an object
+        let boxObj = {boxColor};
+        console.log("box created!");
+        console.log(boxObj);
+        setBoxList([...boxList, boxObj]); //update the array, and add the boxObj to the array (spread operator is used to make a copy)
+
     }
 
     return(
-        <div className="container d-flex justify-content-around">
-            <div className="form-group">
-                <label htmlFor="boxColor">Box Color to be added:</label>
-                <input type="text" className="form-control" />
-                {/* validations would go here */}
-                <submit onClick={(e)=>setBoxColor(e.target.value)} className="form-control btn btn-outline-success">Colorize it Yo!</submit>
-            </div>
+        <>
+            <h2>Fill out this field and then click!</h2>
+            <form onSubmit={submitForm}>
+                <div className="form-group">
+                    <label htmlFor="">Color:</label>
+                    <input className="form-control" type="text" />
+                </div>
+                <input className="btn btn-outline-success" type="submit" value="(^_^)" />
+            </form>
             <hr />
-            <div className="boxList">
-                <div className="background-color: {boxColor}"></div>
-            </div>
-        </div>
+            {
+                boxList.map((box, idx)=>{
+                    return(
+                        <div>
+                            <div className="newBoxColor">here is your |{box}| box </div>
+                        </div>
+                    ) 
+                })
+            }
+        </>
     )
 }
 
