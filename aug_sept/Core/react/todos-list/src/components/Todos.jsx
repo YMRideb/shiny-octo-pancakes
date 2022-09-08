@@ -10,14 +10,15 @@ const Todos = ()=>{
     let [todolist, setTodolist] = useState([]);
 
     const submitHandler = (e)=>{
-
-        e.preventDefault(); // this prevents the form submission from reloading the page
+    e.preventDefault(); // this prevents the form submission from reloading the page
+    console.log(todo);
 
         //put the todo into an object
-        let todoObj = {todo};
-        console.log("You added a todoObj to the list!");
+        setTodo = {todo};
+        console.log("You added a todo to the list!");
         console.log(todo);
-        setTodolist([...todolist, todoObj]); //this updates the array, adding the new object and making a copy of with the spread operator
+        // setTodolist([...todolist, todo]); //this updates the array, adding the new object and making a copy of with the spread operator
+        
     }
 
     return(
@@ -26,7 +27,9 @@ const Todos = ()=>{
                 <form onSubmit={submitHandler}>
                     <div className="form-group">
                         <label>Let's see....</label>
-                        <input type="text" className="form-control" />
+                        <input onChange={(e)=>{
+                            submitHandler(e.target.value);
+                        }} type="text" className="form-control" />
                     </div>
                     <input type="submit" className="btn btn-outline-success" />
                 </form>
@@ -34,8 +37,11 @@ const Todos = ()=>{
                 {
                     todolist.map((todo, idx)=>{
                         return(
-                            <div>
+                            <div className="card">
+                            <h1>This is supposed to be the area of todos</h1>
+                            <p>im getting all of these to print</p>
                                 {todo}
+                                <button>This is a button!</button>
                             </div>
                         )
                     })
