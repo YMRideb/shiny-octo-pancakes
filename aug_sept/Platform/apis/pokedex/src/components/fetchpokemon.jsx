@@ -1,39 +1,32 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const FetchPokemon = () => {
-  let [pokemon, setPokemon] = useState([]);
+  let [pokemonList, setPokemonList] = useState([]);
 
   const getData = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=2000")
-      .then((response) => {
-        return response.json();
-      })
+      axios.get("https://pokeapi.co/api/v2/pokemon?limit=2000")
       .then((response) => {
         console.log("response from api is ->", response);
-        setPokemon(response.results);
-        // console.log(response);
+        setPokemonList(response.data.results);
+        // console.log(response.data.results);
       })
       .catch((err) => {
         console.log("something went wrong with your response");
       });
+    console.log("This is me waiting for the api call to return");
+    console.log("like a dog fetching a ball");
   };
-
-  console.log("This is me waiting for the api call to return");
-  console.log("like a dog fetching a ball");
 
   return (
     <div>
       <button onClick={getData}>This is a button</button>
-      {pokemon.map((Pokemon, idx) => {
+      {pokemonList.map((pokemonObj, idx) => {
         return (
-          <div className="container" key={idx}>
-            <div className="card card-body">
-              <ul>
-                <li>{Pokemon.name}</li>
-              </ul>
-              {/* <h2>{pokemon.type}</h2>
-                        <h2>{pokemon.size}</h2> */}
-            </div>
+          <div className="container card card-body" key={idx}>
+            <ul>
+              <li>{pokemonObj.name}</li>
+            </ul>
           </div>
         );
       })}
