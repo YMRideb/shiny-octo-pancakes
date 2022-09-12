@@ -8,10 +8,10 @@ app.use(express.urlencoded({extended:true}));
 
 class User {
   constructor() {
-    this._id = faker.random.number();
+    this._id = faker.database.mongodbObjectId();
     this.firstName = faker.name.firstName();
     this.lastName = faker.name.lastName();
-    this.phoneNum = faker.phone.phoneNumber();
+    this.phoneNum = faker.phone.number();
     this.email = faker.internet.email();
     this.password = faker.internet.password();
   }
@@ -25,10 +25,10 @@ const users = [];
 
 class Company {
   constructor() {
-    this._id = faker.random.number();
-    this.name = faker.company.companyName();
+    this._id = faker.database.mongodbObjectId();
+    this.name = faker.company.name();
     this.address = {
-        street: faker.random.streetAddress(),
+        street: faker.address.street(),
         city: faker.address.city(),
         state: faker.address.state(),
         zipCode: faker.address.zipCode(),
@@ -47,22 +47,31 @@ const companies = []
 app.post('/api/user/new', (req, res)=>{
     const user = makeNewUser();
     users.push(user);
-    res.json({user});
+    res.json({results: user});
 })
 
-app.post('/api/companies/new', (req, res)=> {
+app.post('/api/company/new', (req, res)=> {
     const company = makeNewCompany();
     companies.push(company);
-    res.json({company});
+    res.json({results: company});
 })
 
-app.post('/api/user/company', (res, req)=>{
+// app.post('/api/user/company/:id')
+  // const user = new User();
+  // const company = new Company();
+  // res.json({user, company});
+    //   // userNew: users[req.params.id],
+    //   // companyNew: companies[req.params.id]
+
+app.get('/api/user/company', (req, res)=>{
     const newUser = makeNewUser();
-    const newCompany = makeNewCompany();
     users.push(newUser);
+    const newCompany = makeNewCompany();
     companies.push(newCompany);
-    res.json({user: newUser, company: newCompany});
-})
+    res.json({
+      users, companies
+    })
+  })
 
 app.get('/api', (req, res)=>{
   res.json({
@@ -77,7 +86,7 @@ app.get('/api/companies', (req, res)=>{
 })
 
 app.get('/api/users', (req, res)=>{
-    res.json({results:users});
+    res.json({results:users})
 })
 
 server = app.listen(port, ()=>console.log((`Listening on port ${port}`)));
