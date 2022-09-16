@@ -17,8 +17,9 @@ const ProductSchema = new mongoose.Schema(
             type: String,
             required: [true, "I need a little more than that"]
         }
-    }
-)
+    },
+    {timestamps: true}
+);
 
 const Product = mongoose.model('product', ProductSchema);
-module.exports = Product;
+module.exports = {Product: Product};
