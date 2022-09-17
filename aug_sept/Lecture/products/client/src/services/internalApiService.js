@@ -43,6 +43,6 @@ export const updateProductById = async (id, data) => {
 };
 
 export const deleteProductById = async (id) => {
-    const res = await http.delete(`.products/${id}`);
+    const res = await http.delete(`/products/${id}`);
     return res.data
 };

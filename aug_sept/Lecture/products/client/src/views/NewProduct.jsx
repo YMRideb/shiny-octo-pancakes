@@ -23,7 +23,7 @@ export const NewProduct = (props) => {
     createProduct(NewProduct)
       .then((data) => {
         console.log("new product data: ", data);
-        navigate(`/products/${data._id}`);
+        navigate(`/products`);
       })
       .catch((error) => {
         //most likely will be a validation error
