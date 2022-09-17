@@ -34,6 +34,7 @@ const handleGetJokeById = async (req, res) => {
     return res.status(400).json(error);
   }
 };
+
 const handleUpdateJokeById = async (req, res) => {
   try {
     const joke = await updateJokeById(req.params.id, req.body);

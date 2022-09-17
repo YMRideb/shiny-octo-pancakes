@@ -53,7 +53,7 @@ const handleUpdateProductById = async (req, res) => {
 }
 
 module.exports = {
-    handleCreateProduct: handleGetProductById,
+    handleCreateProduct: handleCreateProduct,
     handleGetAllProducts: handleGetAllProducts,
     handleGetProductById: handleGetProductById,
     handleDeleteProductById: handleDeleteProductById,

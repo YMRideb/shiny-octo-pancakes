@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require('cors');
-const {productRouter} = require('../routes/product.routes');
 
 // const mongoose = require('mongoose');
 
@@ -12,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+const {productRouter} = require('./routes/product.routes');
 app.use(cors());
 
 app.use('/api/products', productRouter);
