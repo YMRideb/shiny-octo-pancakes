@@ -1,54 +1,54 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import {
+import { 
   getProductById,
-  updateProductById,
-} from "../services/internalApiService";
+  updateProductById } from "../services/internalApiService";
 
 export const EditProduct = (props) => {
-  const { id } = useParams();
+  //url route param matching ":id"
+  const {id} = useParams()
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
 
-//   const [errors, setErrors] = useState(null);
+  const [errors, setErrors] = useState(null);
 
-  useEffect(() =>{
-    getProductById
+  useEffect(()=>{
+    getProductById(id)
     .then((data) =>{
-        const {
-            name,
-            price,
-            description
-        } = data;
+      const {name, price, description} = data;
 
-        setName(name);
-        setPrice(price);
-        setDescription(description);
+      setName(name);
+      setPrice(price);
+      setDescription(description);
     })
     .catch((error) =>{
-        console.log(error)
-    })
-  }, [id])
+      console.log(error);
+    });
+  }, [id]);
 
-  const handleEditProductSubmit = (event) => {
-    //prevents the page from refreshing, aka default form submission behavior
-    event.preventDefaut();
 
-    const updatedProduct = {
-        name, price, description
+  const handleEditProductSubmit = (e) => {
+    e.preventDefault();
+
+    const editedProduct = {
+      name,
+      price,
+      description,
     };
 
-    updateProductById(id, updatedProduct)
-    .then((data) =>{
-        console.log(`Edited product data:`, data);
+    updateProductById(id, editedProduct)
+      .then((data) => {
+        console.log("updated product data: ", data);
         navigate(`/products/${id}`);
-    })
-    .catch((error) =>{
-        console.log(error);
-    });
+      })
+      .catch((error) => {
+        //most likely will be a validation error
+        setErrors(error.response?.data?.errors);
+        console.log(error.response);
+      });
   };
 
   return (
@@ -66,7 +66,7 @@ export const EditProduct = (props) => {
               setName(event.target.value);
             }}
             type="text"
-            className="form-control"
+            className="form-control" value={name}
           />
         </div>
 
@@ -77,7 +77,7 @@ export const EditProduct = (props) => {
               setPrice(event.target.value);
             }}
             type="text"
-            className="form-control"
+            className="form-control" value={price}
           />
         </div>
 
@@ -88,7 +88,7 @@ export const EditProduct = (props) => {
               setDescription(event.target.value);
             }}
             type="text"
-            className="form-control"
+            className="form-control" value={description}
           ></textarea>
         </div>
         <button className="btn btn-md btn-outline-success">Submit</button>
