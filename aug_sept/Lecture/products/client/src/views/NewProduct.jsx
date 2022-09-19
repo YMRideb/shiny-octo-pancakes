@@ -27,7 +27,7 @@ export const NewProduct = (props) => {
       })
       .catch((error) => {
         //most likely will be a validation error
-        setErrors(error.response?.data?.errors);
+        setErrors(error.response?.data?.errors); //optional chaining [in google]
         console.log(error.response);
       });
   };
@@ -41,6 +41,12 @@ export const NewProduct = (props) => {
       }}>
         <div className="form-group">
           <label>Name</label>
+          {
+            //adding error messaging specifically for name
+            errors?.name && (
+              <span style={{ color: 'red'}}> {errors.name?.message}</span>
+            )
+          }
           <input
             onChange={(event) => {
               setName(event.target.value);
@@ -52,6 +58,12 @@ export const NewProduct = (props) => {
 
         <div className="form-group">
           <label>Price</label>
+          {
+            //adding error messaging specifically for price
+            errors?.price && (
+              <span style={{ color: 'red'}}> {errors.price?.message}</span>
+            )
+          }
           <input
             onChange={(event) => {
               setPrice(event.target.value);
@@ -63,6 +75,12 @@ export const NewProduct = (props) => {
 
         <div className="form-group">
           <label>Description</label>
+          {
+            //adding error messaging specifically for description
+            errors?.description && (
+              <span style={{ color: 'red'}}> {errors.description?.message}</span>
+            )
+          }
           <textarea
             onChange={(event) => {
               setDescription(event.target.value);

@@ -46,14 +46,13 @@ export const EditProduct = (props) => {
       })
       .catch((error) => {
         //most likely will be a validation error
-        setErrors(error.response?.data?.errors);
-        console.log(error.response);
+        console.log(error);
       });
   };
 
   return (
     <div className="container">
-      <h1>Please Fill out the info to create your new product</h1>
+      <h1>Please Fill out the info to edit your new product</h1>
       <form
         onSubmit={(event) => {
           handleEditProductSubmit(event);
@@ -61,34 +60,58 @@ export const EditProduct = (props) => {
       >
         <div className="form-group">
           <label>Name</label>
+          {/* {
+            //adding error messaging specifically for name
+            errors?.name && (
+              <span style={{ color: "red" }}> {errors.name?.message}</span>
+            )
+          } */}
           <input
             onChange={(event) => {
               setName(event.target.value);
             }}
             type="text"
-            className="form-control" value={name}
+            className="form-control"
+            value={name}
           />
         </div>
 
         <div className="form-group">
           <label>Price</label>
+          {/* {
+            //adding error messaging specifically for price
+            errors?.price && (
+              <span style={{ color: "red" }}> {errors.price?.message}</span>
+            )
+          } */}
           <input
             onChange={(event) => {
               setPrice(event.target.value);
             }}
             type="text"
-            className="form-control" value={price}
+            className="form-control"
+            value={price}
           />
         </div>
 
         <div className="form-group">
           <label>Description</label>
+          {/* {
+            //adding error messaging specifically for description
+            errors?.description && (
+              <span style={{ color: "red" }}>
+                {" "}
+                {errors.description?.message}
+              </span>
+            )
+          } */}
           <textarea
             onChange={(event) => {
               setDescription(event.target.value);
             }}
             type="text"
-            className="form-control" value={description}
+            className="form-control"
+            value={description}
           ></textarea>
         </div>
         <button className="btn btn-md btn-outline-success">Submit</button>
