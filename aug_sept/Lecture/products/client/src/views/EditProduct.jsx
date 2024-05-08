@@ -60,12 +60,12 @@ export const EditProduct = (props) => {
       >
         <div className="form-group">
           <label>Name</label>
-          {/* {
+          {
             //adding error messaging specifically for name
             errors?.name && (
               <span style={{ color: "red" }}> {errors.name?.message}</span>
             )
-          } */}
+          }
           <input
             onChange={(event) => {
               setName(event.target.value);
@@ -78,12 +78,12 @@ export const EditProduct = (props) => {
 
         <div className="form-group">
           <label>Price</label>
-          {/* {
+          {
             //adding error messaging specifically for price
             errors?.price && (
               <span style={{ color: "red" }}> {errors.price?.message}</span>
             )
-          } */}
+          }
           <input
             onChange={(event) => {
               setPrice(event.target.value);
@@ -96,7 +96,7 @@ export const EditProduct = (props) => {
 
         <div className="form-group">
           <label>Description</label>
-          {/* {
+          {
             //adding error messaging specifically for description
             errors?.description && (
               <span style={{ color: "red" }}>
@@ -104,7 +104,7 @@ export const EditProduct = (props) => {
                 {errors.description?.message}
               </span>
             )
-          } */}
+          }
           <textarea
             onChange={(event) => {
               setDescription(event.target.value);
